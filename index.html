@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;700&display=swap" rel="stylesheet">
+    <title>Calculadora de jornada</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>CALCULADORA DE HORAS TRABALHADAS</h1>
+        </header>
+
+        <form>
+            <label for="valor-hora" >Valor da hora trabalhada:</label><br>
+            <input type="text" id="valor-hora" placeholder="R$"> <br>
+
+            <label for="hora-chegada">Hora de chegada:</label><br>
+            <input type="time" id="hora-chegada" required> <br>
+
+            <label for="hora-saida">Hora de saída:</label><br>
+            <input type="time" id="hora-saida" required> <br>
+
+            <label for="hora-intervalo">Hora do início do intervalo:</label><br>
+            <input type="time" id="hora-intervalo"> <br>
+
+            <label for="duracao-intervalo">Duração do intervalo:</label><br>
+            <input type="time" id="duracao-intervalo"> <br>
+
+            <button type="button" onclick="calcularHoras()">CALCULAR</button>
+            <span id="ddd"></span>
+        </form>
+            
+                <p>Horas trabalhadas: <span id="horas-trabalhadas"></span></p>
+                <p>Valor a receber: R$ <span id="valor-receber"></span></p>
+            
+</body>
+<script src="./calculo.js"></script>
+
+</html>
